@@ -35,16 +35,18 @@
           src="./images/hiyongglass4.ico"
           alt="Logo"
         />
-        <h1 class="header__logo__title"><a href="#home">H2yong</a></h1>
+        <h1 class="header__logo__title">
+          <a href="#home">H<span>2</span>yong</a>
+        </h1>
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
-          <li><a href="#home" class="header__menu__item active">홈으로</a></li>
+          <li><a href="#home" class="header__menu__item active">Home</a></li>
           <li><a href="#about" class="header__menu__item">Hayong</a></li>
-          <li><a href="#skill" class="header__menu__item">기술</a></li>
-          <li><a href="work" class="header__menu__item">포트폴리오</a></li>
-          <li><a href="#license" class="header__menu__item">자격증</a></li>
-          <li><a href="#contact" class="header__menu__item">연락처</a></li>
+          <li><a href="#skill" class="header__menu__item">Tech</a></li>
+          <li><a href="work" class="header__menu__item">Porfolio</a></li>
+          <li><a href="#license" class="header__menu__item">Certificate</a></li>
+          <li><a href="#contact" class="header__menu__item">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -53,16 +55,25 @@
     <main>
       <!-- Home 시작 -->
       <section id="home">
-        <img
-          class="home__avatar"
-          src="./images/hiyongglass4.png"
-          alt="Hayong&#39;s profile"
-        />
-        <h2>
-          안녕하세요! <br />
-          <strong class="home__title--string">하용</strong>입니다.
+        <div class="introimg">
+          <div class="scene">
+            <div class="cube">
+              <div class="face front"></div>
+              <div class="face back"></div>
+              <div class="face right"></div>
+              <div class="face left"></div>
+              <div class="face top"></div>
+              <div class="face bottom"></div>
+            </div>
+          </div>
+        </div>
+        <h2 class="home__title">
+          <p class="home__ani__num1">안녕하세요!</p>
+          <p class="home__ani__num2">
+            <strong class="home__title--string">하용</strong>입니다.
+          </p>
         </h2>
-        <p class="home__description">
+        <p class="home__description" class="home__ani__num3">
           세상에서 가장 뛰어난 AI 개발자가 될 하용입니다.
         </p>
         <a class="home__contact" href="#contact">연락처</a>
@@ -71,14 +82,11 @@
 
       <!-- about 시작 -->
       <section id="about" class="section max-container">
-        <h2 class="title">하용</h2>
+        <h2 class="title">about</h2>
         <p class="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-          impedit, quam atque iste vel modi amet voluptatum quae ipsam suscipit
-          aperiam odio veritatis magni nihil. Nisi ipsa quia sunt? Corrupti?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-          impedit, quam atque iste vel modi amet voluptatum quae ipsam suscipit
-          aperiam odio veritatis magni nihil. Nisi ipsa quia sunt? Corrupti?
+          완성도 높은 코드, 그리고 완성도 높은 UI를 위해 매일 고뇌하는 사람이
+          되도록 하겠습니다. <br />
+          잘부탁드립니다.
         </p>
         <ul class="skills">
           <li class="skill">
@@ -97,30 +105,6 @@
             <p>Python, Pytorch, Tensorflow, Numpy</p>
           </li>
         </ul>
-        <ul class="jobs">
-          <li class="job">
-            <img
-              class="job__img"
-              src="./images/fnslogo.png"
-              alt="FNS,INC Logo"
-            />
-            <div>
-              <p class="job__name">FNS Warehouse cordinator</p>
-              <p class="job__period">2023 ~ 2024</p>
-            </div>
-          </li>
-          <li class="job">
-            <img
-              class="job__img"
-              src="./images/qcellslogo.png"
-              alt="Qcell Logo"
-            />
-            <div>
-              <p class="job__name">Qcell Warehouse cordinator</p>
-              <p class="job__period">2022 ~ 2023</p>
-            </div>
-          </li>
-        </ul>
       </section>
       <!-- about 끝 -->
       <!-- skills 시작 -->
@@ -128,83 +112,58 @@
         <div class="max-container">
           <h2 class="title">기술</h2>
           <p class="description">언어 및 도구</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-            officia minus, aliquam deserunt in voluptas dolores saepe porro
-            dolor fugit eum nisi! Nam, quia aut error et earum officiis velit.
-          </p>
-          <div class="tools">
-            <section class="tools_coding">
-              <h3 class="tools__title">언어</h3>
-              <ul>
-                <li class="bar">
-                  <div class="bar__metadata">
-                    <span>HTML</span><span>100%</span>
-                  </div>
-                  <div class="bar__bg">
-                    <div class="bar__value" style="width: 100%"></div>
-                  </div>
-                </li>
-                <li class="bar">
-                  <div class="bar__metadata">
-                    <span>CSS</span><span>90%</span>
-                  </div>
-                  <div class="bar__bg">
-                    <div class="bar__value" style="width: 90%"></div>
-                  </div>
-                </li>
-                <li class="bar">
-                  <div class="bar__metadata">
-                    <span>JavaScript</span><span>80%</span>
-                  </div>
-                  <div class="bar__bg">
-                    <div class="bar__value" style="width: 80%"></div>
-                  </div>
-                </li>
-                <li class="bar">
-                  <div class="bar__metadata">
-                    <span>Java</span><span>70%</span>
-                  </div>
-                  <div class="bar__bg">
-                    <div class="bar__value" style="width: 70%"></div>
-                  </div>
-                </li>
-                <li class="bar">
-                  <div class="bar__metadata">
-                    <span>Python</span><span>90%</span>
-                  </div>
-                  <div class="bar__bg">
-                    <div class="bar__value" style="width: 90%"></div>
-                  </div>
-                </li>
-              </ul>
-            </section>
+          <div class="skill__icon">
+            <img
+              class="icons"
+              src="https://image.wanted.co.kr/optimize?src=https://static.codenary.co.kr/framework_logo/java.png&w=100&q=90"
+              alt="자바"
+            />
+            <img
+              class="icons"
+              src="https://image.wanted.co.kr/optimize?src=https://static.codenary.co.kr/framework_logo/javascript.png&w=100&q=90"
+              alt="자바 스크립트"
+            />
+            <img
+              class="icons"
+              src="https://image.wanted.co.kr/optimize?src=https://static.codenary.co.kr/framework_logo/python.png&w=100&q=90"
+              alt="파이썬"
+            />
+            <img class="icons"
+            src=https://image.wanted.co.kr/optimize?src=https://static.codenary.co.kr/framework_logo/cplusplus.png&w=100&q=90
+            alt="c++" />
+            <img
+              class="icons"
+              src="https://image.wanted.co.kr/optimize?src=https://static.codenary.co.kr/framework_logo/csharp.png&w=100&q=90"
+              alt="c#"
+            />
+            <img
+              class="icons"
+              src="https://image.wanted.co.kr/optimize?src=https://static.codenary.co.kr/framework_logo/github.png&w=100&q=90"
+              alt="github"
+            />
+            <img
+              class="icons"
+              src="https://image.wanted.co.kr/optimize?src=https://static.codenary.co.kr/framework_logo/nestjs.png&w=100&q=90"
+              alt="nextjs"
+            />
+            <img
+              class="icons"
+              src="https://image.wanted.co.kr/optimize?src=https://static.codenary.co.kr/framework_logo/nodejs.png&w=100&q=90"
+              alt="nodejs"
+            />
 
-            <section class="tools__tools">
-              <h3 class="tools__title">도구</h3>
-              <ul>
-                <li>Visual Studio Code</li>
-                <li>IntelliJ</li>
-                <li>Colab</li>
-                <li>Jupyter</li>
-                <li>Xcode</li>
-              </ul>
-            </section>
-
-            <section class="tools__etc">
-              <h3 class="tools__title">기타</h3>
-              <ul>
-                <li>Git</li>
-                <li>SLACK</li>
-                <li>Math</li>
-              </ul>
-            </section>
+            <img
+              class="icons"
+              src="https://image.wanted.co.kr/optimize?src=https://static.codenary.co.kr/framework_logo/kotlin.png&w=100&q=90"
+              alt="kotlin"
+            />
           </div>
         </div>
       </section>
+
       <!-- skills 끝 -->
       <!-- work 시작 -->
-      <section id="work">
+      <!-- <section id="work">
         <h2>포트폴리오</h2>
         <p>Projects</p>
         <ul>
@@ -221,9 +180,9 @@
             <button>AI <span>4</span></button>
           </li>
         </ul>
-        <ul>
+        <ul> -->
           <!-- targer _black 하게되면 새 탭으로 창을 띄움 -->
-          <li>
+          <!-- <li>
             <a href="#" target="_blank">
               <img src="./images/project.jpg" alt="project 이미지" />
               <div>
@@ -296,10 +255,10 @@
             </a>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- work 끝 -->
       <!-- license 시작 -->
-      <section id="license">
+      <!-- <section id="license">
         <h2>자격증</h2>
         <p>국가 기술 자격증</p>
         <ul>
@@ -343,22 +302,22 @@
             </div>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- license 끝 -->
       <!-- ARROW uP 시작 -->
-      <aside>
+      <!-- <aside>
         <a href="#home" title="위로">
           <i class="fa-solid fa-arrow-up"></i>
         </a>
-      </aside>
+      </aside> -->
       <!-- ARROW uP  끝-->
-    </main>
-    <!-- Main 끝 -->
+    <!-- </main>
+    Main 끝 -->
     <!-- Footer 시작 -->
     <footer id="contact">
       <h2>연락주세요!</h2>
       <p>ssk04022@gmial.com</p>
-      <ul>
+      <!-- <ul>
         <li>
           <a
             href="https://github.com/Hayong-Yang"
@@ -375,7 +334,7 @@
             ><i id="fa-brands fa-gitjub"></i
           ></a>
         </li>
-      </ul>
+      </ul> -->
       <p>&copy; Hayong - All rights reserved</p>
     </footer>
     <!-- Footer 끝 -->
