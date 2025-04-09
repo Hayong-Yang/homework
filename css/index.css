@@ -551,6 +551,19 @@ button:focus {
 .contact__link:hover {
   color: var(--color-accent2);
 }
+.footer__mail {
+  color: var(--color-accent2);
+  animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(255, 217, 0);
+  }
+  to {
+    text-shadow: 0 0 30px rgb(250, 234, 146, 1);
+  }
+}
+
 /* footer 끝 */
 
 /* 미디어 쿼리 */
