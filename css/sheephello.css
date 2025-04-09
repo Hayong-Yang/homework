@@ -1,0 +1,30 @@
+div {
+  width: 500px;
+  height: 500px;
+  /* background: url(../images/hiyongglass4.png) no-repeat center/cover; */
+  animation: movehand2 1s infinite alternate;
+}
+body {
+  background-color: black;
+}
+
+@keyframes movehand {
+  0% {
+    background: url(../images/sheepunderhand.png) no-repeat center/cover;
+  }
+  50% {
+    background: url(../images/sheepmidhand.png) no-repeat center/cover;
+  }
+  100% {
+    background: url(../images/hiyongglass4.png) no-repeat center/cover;
+  }
+}
+
+@keyframes movehand2 {
+  from {
+    background: url(../images/sheepunderhand.png) no-repeat center/cover;
+  }
+  to {
+    background: url(../images/sheepmidhand.png) no-repeat center/cover;
+  }
+}
