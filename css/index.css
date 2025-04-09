@@ -19,12 +19,12 @@
   --color-white: #fff;
   --color-black: #050a13;
   --color-blue: #03e8f9;
-  --color-orange: #fd5413;
+  --color-orange: #fdb313;
   --color-gray: #1b1e26;
   --color-wheat: rgba(245, 222, 179);
 
   /* size */
-  --size-max-width: 1200px;
+  --size-max-width: 100%;
 }
 
 * {
@@ -289,14 +289,14 @@ button:focus {
 /* Home 끝 */
 
 /* about 시작 */
-.skills {
+.abouts {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   margin: 2.5rem 0;
 }
 
-.skill {
+.about {
   background-color: var(--color-primary-varient);
   padding: 2rem 1rem;
   color: var(--color-text);
@@ -304,16 +304,16 @@ button:focus {
   cursor: default;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
 }
-.skill__icon {
+.about__icon {
   font-size: 4rem;
   margin: 1rem 0;
   color: var(--color-accent2);
   transition: all 300ms ease;
 }
-.skill:hover .skill__icon {
+.about:hover .skill__icon {
   transform: rotate(-15deg) scale(1.2);
 }
-.skill__title {
+.about__title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -339,10 +339,6 @@ button:focus {
   /* background-color: var(--color-primary); */
   border-radius: 1rem;
   margin-bottom: 2rem;
-}
-
-.job__img {
-  /* justify-content: center; */
 }
 
 .job__name {
@@ -388,12 +384,254 @@ button:focus {
 
 /* skills 끝 */
 
+/* work 시작 */
+#work {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+.categories {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem;
+  gap: 1rem;
+}
+.category {
+  position: relative;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  padding: 1.5rem 3rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-accent2);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.category--selected {
+  background-color: var(--color-accent2);
+  color: var(--color-primary);
+}
+.categoty__count {
+  opacity: 0;
+  position: absolute;
+  top: -20px;
+  right: 16px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 100%;
+  background-color: var(--color-accent-varient);
+  color: var(--color-text);
+  /* transition: 속성종류(color, background 등..), 시간, 효과  */
+  transition: all 250ms ease-in;
+}
+.categoty--selected .categoty__count,
+.category:hover .categoty__count {
+  opacity: 1;
+  top: 0;
+}
+.projects {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.project {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.project__img {
+  width: 100%;
+}
+/* 검정색 투명한 창 뜨게 하는 곳  */
+.project__metadata {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 250ms ease-in;
+  transform: translateY(-10px);
+}
+.project__metadata:hover {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+/* after: 다음에 나오는 요소를 하나 만들어주는 선택자 */
+/* content: " ": 아무 내용도 없는 빈 가상 요소를 만듦 */
+/* display: block; 가상 요소를 블록 요소처럼 만들어서 크기를 줄 수 있게 함  */
+/* 화면상 파란 선 만든것 */
+.project__title:after {
+  content: "";
+  display: block;
+  position: relative;
+  /* 가운데 정렬 */
+  left: 50%;
+  transform: translate(-50%);
+  margin: 0.5rem 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-accent2);
+}
+
+/* work 끝 */
+/* license 시작 */
+.licenses {
+  margin: 3rem;
+}
+.license {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.license__img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+}
+.license__bubble {
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+}
+.license__bubble__name {
+  color: var(--color-accent2);
+  font-weight: bold;
+  filter: brightness(70%);
+}
+.license__bubble__mobile--popup {
+  width: 6rem;
+  height: 6rem;
+  display: none;
+}
+
+/* license 끝 */
+/* arrow up 시작 */
+.arrow-up {
+  background-color: var(--color-primary);
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 5px 5px 0px 0px var(--color-accent2);
+  transition: transform 250ms ease-in;
+}
+.arrow-up:hover {
+  transform: scale(1.1);
+}
+
+/* arrow up 끝 */
 /* footer 시작 */
 #contact {
-  width: 100%;
-  text-align: center;
   background-color: var(--color-primary);
+  color: var(--color-text);
+}
+.contact__links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+.contact__link {
+  transition: color 250ms ease-in;
+}
+.contact__link:hover {
   color: var(--color-accent2);
-  padding: 2rem;
-  line-height: 3rem;
+}
+/* footer 끝 */
+
+/* 미디어 쿼리 */
+/* 스마트폰 */
+@media (max-width: 767px) {
+  .max-container {
+    width: 100%;
+  }
+
+  #home {
+    margin-top: 1rem;
+  }
+
+  .header__menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    line-height: 2rem;
+    gap: 4px;
+  }
+  .about {
+    height: 22rem;
+  }
+
+  .skill__icon {
+    gap: 2rem;
+  }
+  .icons {
+    width: 5rem;
+  }
+  .categories {
+    flex-wrap: wrap;
+    margin: 0.5rem;
+  }
+  /* .licenses--grid {
+    display: grid;
+    grid-template-areas:
+      "img1 img2 img3"
+      "text1 text2 text3";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+  } */
+  .license__bubble {
+    display: none;
+  }
+  .licenses {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.1rem;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  /* .license__img,
+  .license__bubble__mobile--popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .license__img {
+    width: 5rem;
+    height: 5rem;
+  }
+  /* .img1 {
+    grid-area: img1;
+  }
+  .img2 {
+    grid-area: img2;
+  }
+  .img3 {
+    grid-area: img3;
+  }
+  .text1 {
+    grid-area: text1;
+  }
+  .text2 {
+    grid-area: text2;
+  }
+  .text3 {
+    grid-area: text3;
+  } */
 }

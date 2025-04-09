@@ -44,7 +44,7 @@
           <li><a href="#home" class="header__menu__item active">Home</a></li>
           <li><a href="#about" class="header__menu__item">Hayong</a></li>
           <li><a href="#skill" class="header__menu__item">Tech</a></li>
-          <li><a href="work" class="header__menu__item">Porfolio</a></li>
+          <li><a href="#work" class="header__menu__item">Porfolio</a></li>
           <li><a href="#license" class="header__menu__item">Certificate</a></li>
           <li><a href="#contact" class="header__menu__item">Contact</a></li>
         </ul>
@@ -88,20 +88,20 @@
           되도록 하겠습니다. <br />
           잘부탁드립니다.
         </p>
-        <ul class="skills">
-          <li class="skill">
-            <i class="fa-brands fa-html5 skill__icon"></i>
-            <p class="skill__title">Front-end</p>
+        <ul class="abouts">
+          <li class="about">
+            <i class="fa-brands fa-html5 about__icon"></i>
+            <p class="about__title">Front-end</p>
             <p>HTML, CSS, JavaScript, Node.js, React</p>
           </li>
-          <li class="skill">
-            <i class="fa-solid fa-mobile skill__icon"></i>
-            <p class="skill__title">Mobile</p>
+          <li class="about">
+            <i class="fa-solid fa-mobile about__icon"></i>
+            <p class="about__title">Mobile</p>
             <p>Android, IOS, Kotlin, React-Native</p>
           </li>
-          <li class="skill">
-            <i class="fa-solid fa-rocket skill__icon"></i>
-            <p class="skill__title">AI</p>
+          <li class="about">
+            <i class="fa-solid fa-rocket about__icon"></i>
+            <p class="about__title">AI</p>
             <p>Python, Pytorch, Tensorflow, Numpy</p>
           </li>
         </ul>
@@ -160,182 +160,257 @@
           </div>
         </div>
       </section>
-
       <!-- skills 끝 -->
+
       <!-- work 시작 -->
-      <!-- <section id="work">
-        <h2>포트폴리오</h2>
-        <p>Projects</p>
-        <ul>
-          <li>
-            <button>ALL <span>10</span></button>
-          </li>
-          <li>
-            <button>Front-end <span>3</span></button>
-          </li>
-          <li>
-            <button>Mobile <span>3</span></button>
-          </li>
-          <li>
-            <button>AI <span>4</span></button>
-          </li>
-        </ul>
-        <ul> -->
-          <!-- targer _black 하게되면 새 탭으로 창을 띄움 -->
-          <!-- <li>
-            <a href="#" target="_blank">
-              <img src="./images/project.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #1</h3>
-                <p>project noname</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/project.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #2</h3>
-                <p>project noname</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/project.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #3</h3>
-                <p>project noname</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/project.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #4</h3>
-                <p>project noname</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/project.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #5</h3>
-                <p>project noname</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/project.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #6</h3>
-                <p>project noname</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/project.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #7</h3>
-                <p>project noname</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/project.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #8</h3>
-                <p>project noname</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </section> -->
+      <section id="work" class="section">
+        <div class="max-contatiner">
+          <h2 class="title">포트폴리오</h2>
+          <p class="description">Projects</p>
+          <ul class="categories">
+            <li>
+              <button class="category category--selected">
+                ALL <span class="categoty__count">10</span>
+              </button>
+            </li>
+            <li>
+              <button class="category">
+                Front-end <span class="categoty__count">3</span>
+              </button>
+            </li>
+            <li>
+              <button class="category">
+                Mobile <span class="categoty__count">3</span>
+              </button>
+            </li>
+            <li>
+              <button class="category">
+                AI <span class="categoty__count">4</span>
+              </button>
+            </li>
+          </ul>
+          <ul class="projects">
+            <!-- targer _black 하게되면 새 탭으로 창을 띄움 -->
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="./images/project.jpg"
+                  alt="project 이미지"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #1</h3>
+                  <p>project noname</p>
+                </div>
+              </a>
+            </li>
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="./images/project.jpg"
+                  alt="project 이미지"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #2</h3>
+                  <p>project noname</p>
+                </div>
+              </a>
+            </li>
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="./images/project.jpg"
+                  alt="project 이미지"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #3</h3>
+                  <p>project noname</p>
+                </div>
+              </a>
+            </li>
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="./images/project.jpg"
+                  alt="project 이미지"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #4</h3>
+                  <p>project noname</p>
+                </div>
+              </a>
+            </li>
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="./images/project.jpg"
+                  alt="project 이미지"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #5</h3>
+                  <p>project noname</p>
+                </div>
+              </a>
+            </li>
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="./images/project.jpg"
+                  alt="project 이미지"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #6</h3>
+                  <p>project noname</p>
+                </div>
+              </a>
+            </li>
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="./images/project.jpg"
+                  alt="project 이미지"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #7</h3>
+                  <p>project noname</p>
+                </div>
+              </a>
+            </li>
+            <li class="project">
+              <a href="#" target="_blank">
+                <img
+                  src="./images/project.jpg"
+                  alt="project 이미지"
+                  class="project__img"
+                />
+                <div class="project__metadata">
+                  <h3 class="project__title">Project #8</h3>
+                  <p>project noname</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
       <!-- work 끝 -->
       <!-- license 시작 -->
-      <!-- <section id="license">
-        <h2>자격증</h2>
-        <p>국가 기술 자격증</p>
-        <ul>
-          <li>
-            <img src="./images/certificateimg.jpg" alt="정보처리기사 자격증" />
-            <div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Expedita dolorum alias ab itaque quam nulla consequatur!
-                Deserunt veritatis perspiciatis aperiam, soluta officiis neque,
-                magnam eligendi eum a est esse quam.
-              </p>
-              <p><a href="#">산업인력공단</a></p>
-            </div>
-          </li>
-          <li>
-            <img
-              src="./images/certificateimg.jpg"
-              alt="데이터분석기사 자격증"
-            />
-            <div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Expedita dolorum alias ab itaque quam nulla consequatur!
-                Deserunt veritatis perspiciatis aperiam, soluta officiis neque,
-                magnam eligendi eum a est esse quam.
-              </p>
-              <p><a href="#">한국데이터산업진흥원</a></p>
-            </div>
-          </li>
-          <li>
-            <img src="./images/certificateimg.jpg" alt="ADSP 자격증" />
-            <div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Expedita dolorum alias ab itaque quam nulla consequatur!
-                Deserunt veritatis perspiciatis aperiam, soluta officiis neque,
-                magnam eligendi eum a est esse quam.
-              </p>
-              <p><a href="#">한국데이터산업진흥원</a></p>
-            </div>
-          </li>
-        </ul>
-      </section> -->
+      <section id="license" class="section max-container">
+        <h2 class="title">자격증</h2>
+        <p class="description">국가 기술 자격증</p>
+        <div class="licenses--grid">
+          <ul class="licenses">
+            <li class="license">
+              <img
+                class="license__img"
+                src="./images/certificateimg.jpg"
+                alt="정보처리기사 자격증"
+                class="img1"
+              />
+              <div class="license__bubble">
+                <p>
+                  <a href="#" class="license__bubble__name">산업인력공단</a>
+                </p>
+                <p class="license__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Expedita dolorum alias ab itaque quam nulla consequatur!
+                  Deserunt veritatis perspiciatis aperiam, soluta officiis
+                  neque, magnam eligendi eum a est esse quam.
+                </p>
+              </div>
+            </li>
+            <li class="license">
+              <img
+                class="license__img"
+                src="./images/certificateimg.jpg"
+                alt="정보처리기사 자격증"
+                class="img2"
+              />
+              <div class="license__bubble">
+                <p>
+                  <a href="#" class="license__bubble__name">산업인력공단</a>
+                </p>
+                <p class="license__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Expedita dolorum alias ab itaque quam nulla consequatur!
+                  Deserunt veritatis perspiciatis aperiam, soluta officiis
+                  neque, magnam eligendi eum a est esse quam.
+                </p>
+              </div>
+            </li>
+            <li class="license">
+              <img
+                class="license__img"
+                src="./images/certificateimg.jpg"
+                alt="정보처리기사 자격증"
+                class="img3"
+              />
+              <div class="license__bubble">
+                <p>
+                  <a href="#" class="license__bubble__name">산업인력공단</a>
+                </p>
+                <p class="license__text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Expedita dolorum alias ab itaque quam nulla consequatur!
+                  Deserunt veritatis perspiciatis aperiam, soluta officiis
+                  neque, magnam eligendi eum a est esse quam.
+                </p>
+              </div>
+              <div class="license__bubble__mobile--popup" class="text1">
+                <p>모바일용 텍스트</p>
+              </div>
+              <div class="license__bubble__mobile--popup" class="text2">
+                <p>모바일용 텍스트</p>
+              </div>
+              <div class="license__bubble__mobile--popup" class="text3">
+                <p>모바일용 텍스트</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
       <!-- license 끝 -->
       <!-- ARROW uP 시작 -->
-      <!-- <aside>
-        <a href="#home" title="위로">
+      <aside>
+        <a href="#home" title="위로" class="arrow-up">
           <i class="fa-solid fa-arrow-up"></i>
         </a>
-      </aside> -->
+      </aside>
       <!-- ARROW uP  끝-->
-    <!-- </main>
-    Main 끝 -->
+    </main>
+    <!-- Main 끝 -->
     <!-- Footer 시작 -->
-    <footer id="contact">
-      <h2>연락주세요!</h2>
-      <p>ssk04022@gmial.com</p>
-      <!-- <ul>
-        <li>
-          <a
-            href="https://github.com/Hayong-Yang"
-            target="_blank"
-            title="깃허브"
-            ><i id="fa-brands fa-gitjub"></i
-          ></a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/Hayong-Yang"
-            target="_blank"
-            title="깃허브"
-            ><i id="fa-brands fa-gitjub"></i
-          ></a>
-        </li>
-      </ul> -->
-      <p>&copy; Hayong - All rights reserved</p>
+    <footer id="contact" class="section">
+      <div class="max-container">
+        <h2 class="title">연락주세요!</h2>
+        <p class="description">ssk04022@gmial.com</p>
+        <ul class="contact__links">
+          <li>
+            <a
+              class="contact__link"
+              href="https://github.com/Hayong-Yang"
+              target="_blank"
+              title="깃허브"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="contact__link"
+              href="https://github.com/Hayong-Yang"
+              target="_blank"
+              title="깃허브"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+        </ul>
+        <p>&copy; Hayong - All rights reserved</p>
+      </div>
     </footer>
     <!-- Footer 끝 -->
   </body>
