@@ -1,0 +1,73 @@
+body {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding-top: 15rem;
+}
+
+.cubes {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto;
+  perspective: 100rem;
+}
+
+.surface {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border: 2px solid white;
+  background-color: rgba(0, 150, 255, 0.5);
+  line-height: 15rem;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+/* cube1 */
+
+.cube1 {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(-20deg);
+  width: 100%;
+  height: 100%;
+  transform: rotateX(-20deg) rotateY(-20deg);
+  transition: transform 5s ease-in-out;
+}
+
+.cubes:hover .cube1,
+.cubes:hover .cube2 {
+  transform: rotateX(360deg) rotateY(360deg);
+}
+
+#front {
+  transform: rotateY(0deg) translateZ(2.5rem);
+}
+#back {
+  transform: rotateY(180deg) translateZ(2.5rem);
+}
+#up {
+  transform: rotateX(90deg) translateZ(2.5rem);
+}
+#down {
+  transform: rotateX(-90deg) translateZ(2.5rem);
+}
+#left {
+  transform: rotateY(90deg) translateZ(2.5rem);
+}
+#right {
+  transform: rotateY(-90deg) translateZ(2.5rem);
+}
+
+/* cube2 */
+
+.cube2 {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(-20deg);
+  width: 100%;
+  height: 100%;
+  transform: rotateX(-20deg) rotateY(-20deg);
+  transition: transform 5s ease-in-out;
+}
