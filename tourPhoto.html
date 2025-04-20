@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>놀러갈 곳 사진으로 미리보기</title>
+  </head>
+  <body>
+    <h2>놀러갈 곳 사진으로 미리보기</h2>
+    <button onclick="loadData()">검색</button>
+    <script>
+      const serviceKey =
+        "Wq+LPbmdYSbixCNUPkPm+3vWdEP6EHCS/x/UNPAejzZCAlbDERkA7NZG3aqfORfDOT9cc1Sa7KgaXrpIzaaNAQ==";
+
+      function loadData() {
+        const url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/galleryList1?serviceKey=${encodeURIComponent(
+          serviceKey
+        )}&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=testApp&_type=json`;
+        fetch(url)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("전체 응답 구조 확인:", JSON.stringify(data, null, 2));
+          })
+          .catch((err) => {
+            console.error("에러 발생:", err);
+          });
+      }
+      loadData();
+    </script>
+  </body>
+</html>
