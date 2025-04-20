@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 80%;
+        margin: 0 auto;
+      }
+      h2 {
+        text-align: center;
+      }
+
+      #spotImg img {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        padding: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>관광 사진 온라인 갤러리</h2>
+    <div class="content">
+      <label for="spot">사진 선택</label>
+      <select name="spot" id="spot" onchange="loadData()">
+        <option value="">-- 사진를 선택하세요 --</option>
+        <option value="청설모, 동물|1002144">청설모, 동물</option>
+        <option value="경복궁 자경전 꽃담 문양, 고궁|1002619">
+          경복궁 자경전 꽃담 문양, 고궁
+        </option>
+        <option value="국립고궁박물관|1004457">국립고궁박물관</option>
+        <option value="한국전통음식연구소, 한식조리체험관광|1005600">
+          한국전통음식연구소, 한식조리체험관광
+        </option>
+        <option value="북촌한옥마을, 김성수선생 옛집, 장독대, 항아리|1005783">
+          북촌한옥마을, 김성수선생 옛집, 장독대, 항아리
+        </option>
+        <option value="북촌문화센터, 민화그리기체험|1006314">
+          북촌문화센터, 민화그리기체험
+        </option>
+        <option value="대구경북디자인센터, 대구경북디자인센타|1009235">
+          대구경북디자인센터, 대구경북디자인센타
+        </option>
+        <option value="대가야박물관, 대가야역사관|1009345">
+          대가야박물관, 대가야역사관
+        </option>
+        <option value="대가야박물관, 우륵박물관|1009505">
+          대가야박물관, 우륵박물관
+        </option>
+        <option value="대가야왕릉전시관|1009748">대가야왕릉전시관</option>
+      </select>
+
+      <div id="spotImg"></div>
+    </div>
+    <script>
+      const serviceKey =
+        "Wq+LPbmdYSbixCNUPkPm+3vWdEP6EHCS/x/UNPAejzZCAlbDERkA7NZG3aqfORfDOT9cc1Sa7KgaXrpIzaaNAQ==";
+
+      function loadData() {
+        const selected = document.getElementById("spot").value;
+        if (!selected) {
+          document.getElementById("spotImg").innerHTML = "";
+          return;
+        }
+
+        const contentId = selected.split("|")[1];
+
+        const url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/galleryList1?serviceKey=${encodeURIComponent(
+          serviceKey
+        )}&numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=testApp&_type=json`;
+
+        fetch(url)
+          .then((res) => res.json())
+          .then((data) => {
+            console.log("전체 응답 구조 확인:", JSON.stringify(data, null, 2));
+            const items = data.response?.body?.items?.item || [];
+            const matched = items.find(
+              (item) => item.galContentId == contentId
+            );
+
+            if (matched) {
+              document.getElementById(
+                "spotImg"
+              ).innerHTML = `<img src="${matched.galWebImageUrl}" alt="${matched.galTitle}" />`;
+            } else {
+              document.getElementById("spotImg").innerHTML =
+                "이미지를 찾을 수 없습니다.";
+            }
+          })
+          .catch((err) => {
+            console.error("에러 발생:", err);
+          });
+      }
+    </script>
+  </body>
+</html>
