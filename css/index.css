@@ -1,11 +1,18 @@
 @font-face {
-  font-family: "NoonnuBasicGothicRegular";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noon-2410@1.0/NoonnuBasicGothicRegular.woff2")
-    format("woff2");
+  font-family: "Cafe24Ohsquare";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: "SF_IceLemon";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_IceLemon.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* Global 변수 */
 :root {
   --color-primary: var(--color-black);
@@ -32,7 +39,7 @@
 }
 
 body {
-  font-family: "NoonnuBasicGothicRegular";
+  font-family: "Cafe24Ohsquare";
   margin: 0;
 }
 

@@ -1,0 +1,297 @@
+@font-face {
+  font-family: "GowunDodum-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF_IceLemon";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_IceLemon.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cafe24Ohsquare";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-text1: var(--color-mint);
+  --color-text2: var(--color-white);
+  --color-text3: var(--color-darkMint);
+  --color-back1: var(--color-white-back);
+  --color-back2: var(--color-mint-back);
+  --color-back3: var(--color-black-back);
+  --color-back4: var(--color-gray-back);
+
+  --color-mint: #03e8f9;
+  --color-white: #fff;
+  --color-white-back: #fff;
+  --color-mint-back: #03e8f9;
+  --color-black-back: #050a13;
+  --color-gray-back: #333;
+  --color-darkMint: #00a4b0;
+}
+
+* {
+  /* font-family: "Cafe24Ohsquare"; */
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: url(../images/milky-way.jpg) no-repeat fixed center/cover;
+}
+main {
+  font-family: "GowunDodum-Regular";
+}
+
+/* header 시작 */
+.moon {
+  background-color: var(--color-white-back);
+  width: 30rem;
+  height: 30rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 20rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  box-shadow: 0rem 0rem 4rem var(--color-back2);
+}
+header {
+  margin-bottom: 45rem;
+}
+.header_box {
+  color: var(--color-mint);
+  font-size: 5rem;
+  /* position: relative; */
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0.5rem 0.5rem 0.5rem var(--color-text2);
+  font-family: "SF_IceLemon";
+}
+
+.name--right {
+  /* top: 8rem;
+  right: -10rem; */
+  transform: translateX(100rem);
+}
+.vision--left {
+  /* top: 20rem;
+  left: -10rem; */
+  transform: translateX(-100rem);
+}
+
+.name {
+  position: absolute;
+  top: 8rem;
+  left: 2rem;
+  transition: all 2s ease;
+}
+.vision {
+  position: absolute;
+  top: 20rem;
+  right: 2rem;
+  transition: all 2s ease;
+}
+
+/* main 시작 */
+/* profile 시작 */
+#abouts.abouts--up {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#abouts {
+  width: 80%;
+  height: 50rem;
+  background-color: var(--color-white-back);
+  margin: 0 auto;
+  border-radius: 3rem;
+  box-shadow: 0rem 0rem 2rem var(--color-back2);
+
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.about h2 {
+  font-family: "SF_IceLemon";
+
+  font-size: 4rem;
+  /* font-weight: bold; */
+  text-align: center;
+  color: var(--color-mint);
+  text-shadow: 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.8);
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.profile_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.contact_group {
+  display: flex;
+  flex-direction: column;
+}
+.profile {
+  width: 13rem;
+  height: 13rem;
+  border: 1px solid var(--color-darkMint);
+  border-radius: 100%;
+  background-color: var(--color-darkMint);
+  position: relative;
+  box-shadow: 0.5rem 0.3rem 0.8rem rgba(0, 0, 0, 0.7);
+}
+.profile img {
+  width: 10rem;
+  height: 10rem;
+  bottom: 0.5rem;
+  right: -1rem;
+  border-radius: 100%;
+  position: absolute;
+}
+.profile p {
+  top: 1rem;
+  left: -1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--color-gray-back);
+  color: var(--color-text2);
+  border-radius: 10rem;
+  border: 0.2rem solid var(--color-white-back);
+  padding: 0 1rem;
+  transform: rotate(-15deg);
+  position: absolute;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.8);
+}
+.contact {
+  background-color: var(--color-gray-back);
+  border-radius: 20rem;
+  padding: 0.5rem 1rem;
+  width: 20rem;
+  margin: 1rem 0;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+.contact a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.intro {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: bold;
+}
+
+.intro span {
+  color: var(--color-mint);
+  text-shadow: 0.2rem 0.1rem 0.2rem rgba(0, 0, 0, 1);
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+/* 스킬 시작 */
+
+.contentBox--rotate {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+#skills {
+  margin-bottom: 8rem;
+}
+
+#skills h2 {
+  color: var(--color-text2);
+  font-family: "SF_IceLemon";
+  font-size: 5rem;
+  text-shadow: 0.2rem 0.2rem 0.3rem var(--color-mint-back);
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-bottom: 5rem;
+}
+
+.contentBox1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 5rem;
+  gap: 5rem;
+
+  opacity: 0;
+  transform: rotateY(-180deg);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.contentBox2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 5rem;
+  gap: 5rem;
+
+  opacity: 0;
+  transform: rotateY(-180deg);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.skillBox {
+  width: 40%;
+  height: 10rem;
+  border: 0.2rem solid var(--color-mint);
+  border-radius: 2rem;
+  color: var(--color-text2);
+  text-align: center;
+  line-height: 10rem;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0rem 0rem 2rem var(--color-back1);
+  font-size: 2.5rem;
+}
+.skillBox p {
+  text-shadow: -1.5px 0 var(--color-text2), 0 1.5px var(--color-text2),
+    1.5px 0 var(--color-text2), 0 -1.5px var(--color-text2);
+}
+
+/* 경력,활동 시작 */
+
+#career {
+  background-color: var(--color-back1);
+  height: 40rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1rem;
+  text-align: center;
+}
+#career span {
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--color-darkMint);
+  text-shadow: 0 0 0.1rem var(--color-darkMint);
+}
+
+/* .activity_box {
+  text-align: left;
+}
+
+.career_box {
+  text-align: right;
+} */
+
+.career_box {
+  border: 1px solid black;
+}
+.activity_box {
+  border: 1px solid black;
+}
