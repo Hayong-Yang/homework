@@ -384,12 +384,12 @@ header {
     background: url(../images/milky-way.jpg);
   }
   .moon {
-    width: 18rem;
-    height: 18rem;
+    width: 12rem;
+    height: 12rem;
   }
 
   .header_box {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .name--right {
     transform: translateX(50rem);
@@ -399,10 +399,11 @@ header {
   }
   .name {
     position: absolute;
-    top: 16rem;
+    top: 17rem;
     left: 1rem;
     transition: all 2s ease;
   }
+
   .vision {
     position: absolute;
     top: 21rem;
@@ -411,9 +412,32 @@ header {
   }
   /* main 시작 */
   /* profile 시작 */
-  .intro {
+  #abouts {
+    height: 70rem;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .profile_box {
+    flex-wrap: wrap;
+  }
+  .contact {
+    border-radius: 20rem;
+    padding: 0.3rem 0.3rem;
+    width: 15rem;
+    text-align: center;
+    margin: 0.7rem 0;
+  }
+
+  .contact a {
+    margin-left: 0;
     font-size: 1rem;
-    margin-top: 3rem;
+  }
+  .intro {
+    font-size: 0.9rem;
+    margin: 3rem 3rem;
   }
   .intro span {
     font-size: 1.4rem;
@@ -421,11 +445,40 @@ header {
   .intro p {
     margin-bottom: 1.2rem;
   }
+
+  /* 스킬 시작 */
+  #skills h2 {
+    font-size: 2.2rem;
+  }
+  .contentBox1 {
+    padding: 2rem 0rem;
+    gap: 2rem;
+
+    opacity: 0;
+    transform: rotateY(-180deg);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+  .contentBox2 {
+    padding: 2rem 0rem;
+    gap: 2rem;
+
+    opacity: 0;
+    transform: rotateY(-180deg);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+
+  .skillBox {
+    width: 30%;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
   /* 경력,활동 시작 */
   .total_box {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 4.5rem;
+    padding: 0 2rem;
   }
 
   .career_box {
@@ -438,8 +491,6 @@ header {
   }
   #career span {
     font-weight: bold;
-    font-size: 1.8rem;
-    color: var(--color-darkMint);
-    text-shadow: 0 0 0.1rem var(--color-darkMint);
+    font-size: 1rem;
   }
 }
