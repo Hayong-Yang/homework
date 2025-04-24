@@ -54,6 +54,7 @@ main {
 /* header 시작 */
 .moon {
   background-color: var(--color-white-back);
+  /* background: url(../images/luna.png) no-repeat fill center/cover; */
   width: 30rem;
   height: 30rem;
   border-radius: 100%;
@@ -266,14 +267,28 @@ header {
 
 /* 경력,활동 시작 */
 
-#career {
+.career-change {
   background-color: var(--color-back1);
+}
+
+#background {
+  background-color: none;
+  transition: all 0.25s ease-in-out;
+}
+
+#career {
+  /* background-color: none; */
   height: 40rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   font-size: 1rem;
   text-align: center;
+  transition: all 2s ease-in-out;
 }
+
+.total_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 #career span {
   font-weight: bold;
   font-size: 2rem;
@@ -290,8 +305,141 @@ header {
 } */
 
 .career_box {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  padding-left: 15rem;
 }
 .activity_box {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  padding-left: 15rem;
+}
+
+.activity_text {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  /* transition: opacity 0.5s ease-in-out; */
+}
+
+.career_text {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  /* transition: opacity 0.5s ease-in-out; */
+}
+
+.activity_text:nth-of-type(1) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+.activity_text:nth-of-type(2) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0.4s;
+}
+.activity_text:nth-of-type(3) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0.8s;
+}
+.activity_text:nth-of-type(4) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 1.2s;
+}
+.activity_text:nth-of-type(5) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 1.6s;
+}
+.activity_text:nth-of-type(6) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 2s;
+}
+
+.career_text:nth-of-type(1) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0s;
+}
+.career_text:nth-of-type(2) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0.4s;
+}
+.career_text:nth-of-type(3) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0.8s;
+}
+.career_text:nth-of-type(4) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 1.2s;
+}
+.career_text:nth-of-type(5) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 1.6s;
+}
+.career_text:nth-of-type(6) {
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 2s;
+}
+
+/* 모바일 미디어쿼리 */
+@media (max-width: 768px) {
+  /* header 시작 */
+  body {
+    background: url(../images/milky-way.jpg);
+  }
+  .moon {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .header_box {
+    font-size: 2rem;
+  }
+  .name--right {
+    transform: translateX(50rem);
+  }
+  .vision--left {
+    transform: translateX(-50rem);
+  }
+  .name {
+    position: absolute;
+    top: 16rem;
+    left: 1rem;
+    transition: all 2s ease;
+  }
+  .vision {
+    position: absolute;
+    top: 21rem;
+    right: 1rem;
+    transition: all 2s ease;
+  }
+  /* main 시작 */
+  /* profile 시작 */
+  .intro {
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
+  .intro span {
+    font-size: 1.4rem;
+  }
+  .intro p {
+    margin-bottom: 1.2rem;
+  }
+  /* 경력,활동 시작 */
+  .total_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 4.5rem;
+  }
+
+  .career_box {
+    /* border: 1px solid black; */
+    padding-left: 2rem;
+  }
+  .activity_box {
+    /* border: 1px solid black; */
+    padding-left: 2rem;
+  }
+  #career span {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--color-darkMint);
+    text-shadow: 0 0 0.1rem var(--color-darkMint);
+  }
 }

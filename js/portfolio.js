@@ -51,3 +51,58 @@ document.addEventListener("scroll", () => {
     contentBox2.style.transform = "rotateY(180deg)";
   }
 });
+
+// career 배경색 하얗게 바꾸기.
+const total = document.getElementById("career");
+// const totalbox = document.getElementsByClassName("total_box");
+// const body = document.body;
+const totalTop = total.offsetTop;
+const background = document.getElementById("background");
+const activity_text = document.getElementsByClassName("activity_text");
+const career_text = document.getElementsByClassName("career_text");
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY + window.innerHeight > totalTop + 250) {
+    background.classList.add("career-change");
+    for (let i = 0; i < activity_text.length; i++) {
+      activity_text[i].style.opacity = "1";
+    }
+    for (let i = 0; i < career_text.length; i++) {
+      career_text[i].style.opacity = "1";
+    }
+  } else {
+    background.classList.remove("career-change");
+    for (let i = 0; i < activity_text.length; i++) {
+      activity_text[i].style.opacity = "0";
+    }
+    for (let i = 0; i < career_text.length; i++) {
+      career_text[i].style.opacity = "0";
+    }
+  }
+});
+
+// career 글자 스크롤 내리면 나타나기.
+
+// document.addEventListener("scroll", () => {
+//   if (window.scrollY + window.innerHeight > totalTop + 250) {
+//     for (let i = 0; i < activity_text.length; i++) {
+//       activity_text[i].style.opacity = "1";
+//     }
+//     for (let i = 0; i < career_text.length; i++) {
+//       career_text[i].style.opacity = "1";
+//     }
+
+//     // activity_text.style.opacity = "1";
+//     // career_text.style.opacity = "1";
+//   } else {
+//     for (let i = 0; i < activity_text.length; i++) {
+//       activity_text[i].style.opacity = "0";
+//     }
+//     for (let i = 0; i < career_text.length; i++) {
+//       career_text[i].style.opacity = "0";
+//     }
+
+//     // activity_text.style.opacity = "0";
+//     // career_text.style.opacity = "0";
+//   }
+// });

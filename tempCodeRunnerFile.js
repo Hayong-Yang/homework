@@ -1,2 +1,0 @@
-
-  myPets.forEach((pet) => {
