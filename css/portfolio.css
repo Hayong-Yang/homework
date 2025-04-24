@@ -382,6 +382,7 @@ header {
   /* header 시작 */
   body {
     background: url(../images/milky-way.jpg);
+    overflow-x: hidden;
   }
   .moon {
     width: 12rem;
